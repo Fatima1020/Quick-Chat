@@ -21,7 +21,7 @@ export const createNewChat = async ( members ) => {
 
 export const clearUnreadMessageCount = async ( chatId ) => {
     try{
-        const response = await axiosInstance.post(url + 'api/chat/clear-unread-message', { chatId: chatId });
+        const response = await axiosInstance.post(url + '/api/chat/clear-unread-message', { chatId: chatId });
         return response.data;
     }catch(error){
         return error;
