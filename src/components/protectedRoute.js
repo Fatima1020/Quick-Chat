@@ -24,11 +24,11 @@ function ProtectedRoute({children}){
                 dispatch(setUser(response.data));
             }else{
                 toast.error(response.message);
-                window.location.href = '/login';
+                // window.location.href = '/login';
             }
         }catch(error){
             dispatch(hideLoader())
-            navigate('/login');
+            // navigate('/login');
         }
     }
 
@@ -43,11 +43,11 @@ function ProtectedRoute({children}){
                 dispatch(setAllUsers(response.data));
             }else{
                 toast.error(response.message);
-                window.location.href = '/login';
+                // window.location.href = '/login';
             }
         }catch(error){
             dispatch(hideLoader())
-            navigate('/login');
+            // navigate('/login');
         }
     }
 
@@ -59,7 +59,7 @@ function ProtectedRoute({children}){
                 dispatch(setAllChats(response.data))
             }
         }catch(error){
-            navigate('/login');
+            // navigate('/login');
         }
     }
 
