@@ -32,7 +32,7 @@ useEffect(() => {
     });
   }
   else{
-   navigate('/login');
+   // navigate('/login');
   }
 }, [user, onlineuser])  
 
