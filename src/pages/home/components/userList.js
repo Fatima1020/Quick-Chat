@@ -13,7 +13,6 @@ function UsersList({searchKey, socket, onlineUser}){
 
   // ---------------- CREATE NEW CHAT ----------------
   const startNewChat = async (searchedUserId) => {
-    let response = null;
     try {
       dispatch(showLoader());
       const response = await createNewChat([currentuser._id, searchedUserId]);
