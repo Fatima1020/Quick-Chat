@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const url = "http://localhost:5000"
+export const url = "https://quick-chat-backend-production.up.railway.app"
 
 export const axiosInstance = axios.create({
     headers: {
