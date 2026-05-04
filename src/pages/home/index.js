@@ -17,7 +17,7 @@ useEffect(() => {
    if (socket) {
       socket.on('message', (data) => {});
    }
-}, [socket]);
+}, []);
 
 useEffect(() => {
   if (user) {
@@ -34,7 +34,7 @@ useEffect(() => {
   else{
    navigate('/login');
   }
-}, [user, onlineuser])  
+}, [user, onlineuser, navigate])
 
    return (
       <div className="home-page">

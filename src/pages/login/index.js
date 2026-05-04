@@ -4,7 +4,6 @@ import { loginUser } from './../../apiCalls/auth';
 import{ toast } from 'react-hot-toast';
 import { useDispatch } from "react-redux";
 import { hideLoader, showLoader } from "../../redux/loaderSlice";
-import { useNavigate } from "react-router-dom";
 
 
 function Login(){

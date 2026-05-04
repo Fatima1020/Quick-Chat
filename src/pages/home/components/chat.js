@@ -4,7 +4,7 @@ import { createNewMessage, getAllMessages } from "../../../apiCalls/message";
 import { hideLoader, showLoader } from "../../../redux/loaderSlice";
 import { setAllChats } from "../../../redux/usersSlice";
 import toast from "react-hot-toast";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { clearUnreadMessageCount } from "../../../apiCalls/chat";
 import moment from "moment";
 import store from './../../../redux/store';
@@ -176,6 +176,7 @@ function ChatArea({ socket }) {
         }, 2000)
       }
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedChat])
 
   useEffect(() => {
@@ -198,7 +199,7 @@ function ChatArea({ socket }) {
             <div>
               <div className={isSender ? "send-message" : "received-message"}>
                 <div>{msg.text}</div>
-                <div>{msg.image && <img src={msg.image} alt="image" height="120" width="120"></img>}</div>
+                <div>{msg.image && <img src={msg.image} alt="" height="120" width="120"></img>}</div>
               </div>
               <div className="message-timestamp"
                 style={{
