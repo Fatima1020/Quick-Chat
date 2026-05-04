@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const socket = io('https://quick-chat-backend-production.up.railway.app');
+const socket = io('https://quick-chat-backend-production.up.railway.app/');
 
 function Home(){
    const { selectedChat, user } = useSelector(state => state.userReducer);
